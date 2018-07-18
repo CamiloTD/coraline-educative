@@ -1,4 +1,36 @@
 {
 	"id": "en",
-	"project_name": "Coraline Educative"
+	"project_name": "Coraline Educative",
+	"navbar": {
+		"home": "Home",
+		"saved": "My Coralines",
+		"repo": "Repository"
+	},
+
+	"headers": {
+		"browse_by_category": "Browse by Category"
+	},
+
+	"categories": {
+		"biology": "Biology",
+		"ecology": "Ecology",
+		"education": "Education",
+		"psychology": "Psychology",
+		"mathematics": "Mathematics",
+		"chemistry": "Chemistry",
+		"physics": "Physics",
+		"paleontology": "Paleontology",
+		"anthropology": "Anthropology",
+		"engineering": "Engineering",
+		"social-science": "Social Science",
+		"materials-science": "Materials Science",
+		"medicine": "Medicine",
+		"art-and-design": "Art and Design",
+		"data-science": "Data Science",
+		"economics": "Economics",
+		"earth-science": "Earth Science",
+		"neuroscience": "Neuroscience",
+		"political-science": "Political Science",
+		"computer-science": "Computer Science"
+	}
 }

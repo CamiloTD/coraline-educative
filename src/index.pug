@@ -1,1 +1,40 @@
-title #{Lang.project_name}
+html
+	head
+		title #{Lang.project_name}
+		link(rel="stylesheet" href="/styles/index.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/menu.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/icon.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/input.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/container.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/segment.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/header.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/label.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/image.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/grid.min.css")
+	body
+		.ui.top.fixed.menu
+			.item
+				img(src="https://semantic-ui.com/images/logo.png")
+
+			each text, index in Lang.navbar
+				a.item(href="/" + Lang.id + "/" + index + ".html")= text
+			- 0;
+
+		.slider
+			img.background(src="/img/high-res/romanesco.jpg")
+
+
+		.ui.raised.very.padded.container.segment
+			h2.ui.header
+				i.bars.icon
+				| #{Lang.headers.browse_by_category}
+
+			.ui.grid
+				each category, id in Lang.categories
+					.column.two.wide
+						a.ui.basic.image.label.category_label
+							img(src="/img/icons/categories/" + id + ".png")
+							span.fluid= category
+
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")

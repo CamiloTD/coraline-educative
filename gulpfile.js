@@ -18,7 +18,7 @@ function watchPug(cb, ignoreInitial = false) {
         pretty: DEBUG,
         cache: false
     }).on('error', function (error) {
-        console.log(error);
+        console.log(error.message);
         watchPug(cb, true);
     });
 
@@ -28,8 +28,7 @@ function watchPug(cb, ignoreInitial = false) {
 
 function watchStylus(cb, ignoreInitial = false) {
     let styl_obj = stylus({
-        include: 'src',
-        import: 'src/stylus-import'
+        include: 'src'
     }).on('error', function (error) {
         console.log(error);
         watchStylus(cb, true);
