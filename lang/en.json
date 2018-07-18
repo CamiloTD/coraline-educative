@@ -22,15 +22,15 @@
 		"paleontology": "Paleontology",
 		"anthropology": "Anthropology",
 		"engineering": "Engineering",
-		"social-science": "Social Science",
-		"materials-science": "Materials Science",
+		"social-science": "Social Sci.",
+		"materials-science": "Materials Sci.",
 		"medicine": "Medicine",
 		"art-and-design": "Art and Design",
 		"data-science": "Data Science",
 		"economics": "Economics",
 		"earth-science": "Earth Science",
 		"neuroscience": "Neuroscience",
-		"political-science": "Political Science",
-		"computer-science": "Computer Science"
+		"political-science": "Political Sci.",
+		"computer-science": "Computer Sci."
 	}
 }
