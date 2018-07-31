@@ -1,0 +1,32 @@
+{
+  "name": "coraline-educative",
+  "version": "0.0.0",
+  "description": "Coraline Educative Project",
+  "main": "index.js",
+  "repository": "https://github.com/CamiloTD/coraline-educative.git",
+  "author": "CamiloTD <camilotd1999@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "start": "node_modules/.bin/electron app",
+    "build": "node_modules/.bin/webpack -d",
+    "produce": "node_modules/.bin/webpack -p"
+  },
+  "dependencies": {
+    "css-loader": "^1.0.0",
+    "electron": "^2.0.5",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "semantic-ui-react": "^0.82.1",
+    "style-loader": "^0.21.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "stylus": "^0.54.5",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
+  }
+}
