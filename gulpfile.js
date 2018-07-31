@@ -5,10 +5,18 @@ const stylus = require('gulp-stylus');
 
 const DEBUG = true;
 
-function watchPug(cb, ignoreInitial = false) {
+gulp.task('build-stylus', () => {
+    let styl_obj = stylus({
+        include: 'src'
+    })
+
+    return gulp.src('src/**/*.styl').pipe(styl_obj).pipe(gulp.dest('public'));
+});
+
+gulp.task('build-pug', () => {
     let pug_obj = pug({
         i18n: {
-            locales: 'lang/*.*',
+            locales: 'src/lang/*.*',
             dest: 'public',
             namespace: 'Lang',
             filename: '{{lang}}/{{basename}}.html'
@@ -17,27 +25,12 @@ function watchPug(cb, ignoreInitial = false) {
         doctype: 'html',
         pretty: DEBUG,
         cache: false
-    }).on('error', function (error) {
-        console.log(error.message);
-        watchPug(cb, true);
-    });
+    })
 
-    return watch('src/**/*.pug', {ignoreInitial: ignoreInitial}).pipe(pug_obj).pipe(gulp.dest('public'));
+    return gulp.src(['src/**/*.pug', '!/includes/**/*.*']).pipe(pug_obj).pipe(gulp.dest('public'));
+});
 
-}
+gulp.task('build-rest', () => gulp.src(['!src/**/*.pug', '!src/**/*.styl']).pipe(gulp.dest('public')));
 
-function watchStylus(cb, ignoreInitial = false) {
-    let styl_obj = stylus({
-        include: 'src'
-    }).on('error', function (error) {
-        console.log(error);
-        watchStylus(cb, true);
-    });
-
-    return watch('src/**/*.styl', {ignoreInitial: ignoreInitial}).pipe(styl_obj).pipe(gulp.dest('public'));
-}
-
-gulp.task('watch-stylus', watchStylus);
-gulp.task('watch-pug', watchPug);
-
-gulp.task('default', ['watch-pug', 'watch-stylus']);
+gulp.task('build', ['build-pug', 'build-stylus', 'build-rest']);
+gulp.task('watch', () => watch('src/**/*.*', { ignoreInitial: false }, () => gulp.start('build')));
