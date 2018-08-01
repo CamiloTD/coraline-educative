@@ -26,13 +26,8 @@
     "url": "https://github.com/CamiloTD/coraline-educative/issues"
   },
   "homepage": "https://github.com/CamiloTD/coraline-educative#readme",
-  "devDependencies": {},
-  "dependencies": {
-    "express": "^4.16.3",
-    "gulp": "^3.9.1",
-    "gulp-pug-i18n": "^1.0.0",
-    "gulp-stylus": "^2.7.0",
-    "gulp-watch": "^5.0.0",
-    "pug": "^2.0.3"
-  }
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {}
 }

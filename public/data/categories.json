@@ -1,0 +1,6 @@
+{
+	"humanities": ["arts", "history", "lang", "philosophy", "theology"],
+	"social": ["anthropology", "economics", "law", "political", "psychology", "sociology"],
+	"natural": ["biology", "chemistry", "earth", "space", "physics"],
+	"formal": ["computer", "math", "statistics", "engineering", "medicine"]
+}
