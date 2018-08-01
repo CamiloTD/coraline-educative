@@ -29,5 +29,10 @@
   "devDependencies": {
     "gulp": "^3.9.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "coraline-core": "^1.0.5",
+    "express": "^4.16.3",
+    "opn": "^5.3.0",
+    "socket.io": "^2.1.1"
+  }
 }
