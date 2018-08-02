@@ -9,6 +9,8 @@ let app = express();
 let server = http.Server(app);
 let io = socket_io(server);
 
+const PORT = +process.argv[2] || 9080
+
 app.use(function (rq, rs, next) {
 	let { url } = rq;
 	if(url.substring(url.length -4) === '.kmi') {
@@ -27,10 +29,6 @@ app.use(function (rq, rs, next) {
 	} else next();
 });
 
-app.get('/@test.js', (rq, rs) => {
-	rs.sendFile(path.join(__dirname, 'test-entry.js'));
-});
-
 app.get('/', (rq, rs) => {
 	rs.end(`
 			<!DOCTYPE html>
@@ -40,16 +38,16 @@ app.get('/', (rq, rs) => {
 			<body>
 				<script src="/kmi_modules/require.kmi.js"></script>
 
-				<meta kmi-init="@test">
+				<meta kmi-init="index">
 			</body>
 			</html>
 	`);
 });
 
-app.use(express.static('build'));
+app.use(express.static('public'));
 
-server.listen(8080, () => {
-	console.log("Coraline-Educative is running at port :8080");
-	opn('http://localhost:8080/');
+server.listen(PORT, () => {
+	console.log("Coraline-Educative is running at port :" + PORT);
+	opn('http://localhost:' + PORT + '/');
 });
-Coraline.createServer(io);
+Coraline.createServer(io, { password: 'H1dd3n' });
