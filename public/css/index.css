@@ -18,6 +18,14 @@ p {
 .category_label, .content, .divider {
   font-family: 'Open Sans';
 }
+
+.category_label {
+  padding-top: 	  15px !important;
+  padding-bottom: 15px !important;
+  text-align: left;
+  padding-left: 30px !important;
+}
+
 .bars.icon {
   color: #4ab27e;
 }
