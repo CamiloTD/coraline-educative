@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
-	background: url('/img/textures/ep_naturalblack.png');
+  margin: 0;
+  padding: 0;
+  background: url('/img/textures/ep_naturalblack.png');
+}
+p {
+  font-family: 'Open Sans';
+}
+.slider {
+  overflow: hidden;
+}
+.slider .background {
+  width: 100%;
+  margin-top: -100px;
+}
+
+.category_label, .content, .divider {
+  font-family: 'Open Sans';
+}
+.bars.icon {
+  color: #4ab27e;
 }
