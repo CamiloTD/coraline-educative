@@ -1,53 +1,105 @@
-const http = require('http');
-const path = require('path');
-const express = require('express');
-const socket_io = require('socket.io');
-const Coraline = require('coraline-core');
-const opn = require('opn');
+// Require
+	// Native 
+		const fs = require('fs');
+		const http = require('http');
+		const path = require('path');
+	// External
+		const Utils = require('./utils');
 
-let app = express();
-let server = http.Server(app);
-let io = socket_io(server);
+		const express = require('express');
+		const socket_io = require('socket.io');
+		const Coraline = require('coraline-core');
+// Define
+	let app = express();
+	let server = http.Server(app);
+	let io = socket_io(server);
 
-const PORT = +process.argv[2] || 9080
+	const PORT = +process.argv[2] || 9080
+	const PUBLIC_DIR = 'public';
+	const CORALINE_DIR = 'public/packages';
+// Require.kmi config
+	app.use(function (rq, rs, next) {
+		let { url } = rq;
+		if(url.substring(url.length -4) === '.kmi') {
+			rs.end(`
+				<!DOCTYPE html>
+				<html>
+				<head>
+				</head>
+				<body>
+					<script src="/kmi_modules/require.kmi.js"></script>
 
-app.use(function (rq, rs, next) {
-	let { url } = rq;
-	if(url.substring(url.length -4) === '.kmi') {
+					<meta kmi-init="${url.substring(0, url.length - 4)}">
+				</body>
+				</html>
+			`);
+		} else next();
+	});
+
+	app.get('/', (rq, rs) => {
 		rs.end(`
-			<!DOCTYPE html>
-			<html>
-			<head>
-			</head>
-			<body>
-				<script src="/kmi_modules/require.kmi.js"></script>
+				<!DOCTYPE html>
+				<html>
+				<head>
+				</head>
+				<body>
+					<script src="/kmi_modules/require.kmi.js"></script>
 
-				<meta kmi-init="${url.substring(0, url.length - 4)}">
-			</body>
-			</html>
+					<meta kmi-init="index">
+				</body>
+				</html>
 		`);
-	} else next();
-});
+	});
+// Config
+	app.use(express.static(PUBLIC_DIR));
 
-app.get('/', (rq, rs) => {
-	rs.end(`
-			<!DOCTYPE html>
-			<html>
-			<head>
-			</head>
-			<body>
-				<script src="/kmi_modules/require.kmi.js"></script>
+	server.listen(PORT, () => {
+		console.log("Coraline-Educative is running at port :" + PORT);
+	});
 
-				<meta kmi-init="index">
-			</body>
-			</html>
-	`);
-});
+	let coraline_server = Coraline.createServer(io, { password: 'H1dd3n' });
+// Info Server Config
+	let info_io = io.of('/info');
+	let coralines = {};
 
-app.use(express.static('public'));
+	async function loadCoralines () {
+		coralines = {};
+		let package_dirs = await Utils.readdir(CORALINE_DIR);
+		let count = 0;
 
-server.listen(PORT, () => {
-	console.log("Coraline-Educative is running at port :" + PORT);
-	opn('http://localhost:' + PORT + '/');
-});
-Coraline.createServer(io, { password: 'H1dd3n' });
+		for(let i=0, l=package_dirs.length;i<l;i++) {
+			let dirname = package_dirs[i];
+			let dir = path.join(CORALINE_DIR, dirname);
+			let stats = await Utils.stat(dir);
+
+			if(!stats.isDirectory()) continue;
+
+			try {
+				let data = JSON.parse(await Utils.read(path.join(dir, 'coraline.json')));
+
+				coralines[dirname] = data;
+				count++;
+			} catch (exc) {
+				console.log(exc);
+			}
+		}
+
+		return count;
+	}
+
+	info_io.on('connection', (sock) => {
+		sock.on('packages', (filter) => {
+			if(!filter) return sock.emit('packages', coralines);
+			let toSend = {};
+
+			for(let i in coralines)
+				if(coralines[i].categories.indexOf(filter) !== -1) toSend[i] = coralines[i];
+
+			sock.emit('packages', toSend);
+		});
+	});
+	(async () => {
+		console.log("Loading coralines...");
+		let count = await loadCoralines();
+		console.log(count + " coralines loaded.");
+	})();

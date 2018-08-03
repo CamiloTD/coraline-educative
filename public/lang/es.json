@@ -8,7 +8,7 @@
 	"categories": {
 		"arts"	 	  : "Artes",
 		"history"	  : "Historia",
-		"lang"	 	  : "Lenguage & Literatura",
+		"lang"	 	  : "Lenguaje & Literatura",
 		"philosophy"  : "Filosofía",
 		"theology"	  : "Teología",
 		"anthropology": "Antropología",
@@ -31,7 +31,11 @@
 
 	"pages": {
 		"index": {
-			"header": "¿Qué quieres aprender hoy?"
+			"header": "¿Qué quieres aprender hoy?",
+			"no_coralines_found": "No se ha encontrado ningún Coraline para ésta categoría.",
+			"scroll_top": "Volver Arriba",
+			"play": "Iniciar",
+			"desc": "Descripción"
 		}
 	}
 }

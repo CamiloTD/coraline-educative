@@ -8,3 +8,5 @@ require('./label.min.css');
 require('./menu.min.css');
 require('./segment.min.css');
 require('./divider.min.css');
+require('./card.min.css');
+require('./button.min.css');

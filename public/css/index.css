@@ -4,8 +4,8 @@ body {
   padding: 0;
   background: url('/img/textures/ep_naturalblack.png');
 }
-p {
-  font-family: 'Open Sans';
+* {
+  font-family: 'Open Sans' !important;
 }
 .slider {
   overflow: hidden;
@@ -13,10 +13,6 @@ p {
 .slider .background {
   width: 100%;
   margin-top: -100px;
-}
-
-.category_label, .content, .divider {
-  font-family: 'Open Sans';
 }
 
 .category_label {
@@ -28,4 +24,22 @@ p {
 
 .bars.icon {
   color: #4ab27e;
+}
+
+.scrolltop {
+  margin-top: 50px !important;
+}
+
+.category_container {
+  text-align: left;
+}
+
+.category_container .divider {
+  padding-bottom: 20px;
+  text-transform: none !important;
+}
+
+.category_container .divider img {
+  vertical-align: middle;
+  padding: 20px;
 }

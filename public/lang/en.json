@@ -32,7 +32,11 @@
 
 	"pages": {
 		"index": {
-			"header": "What do you want to learn?"
+			"header": "What do you want to learn?",
+			"no_coralines_found": "No Coralines found for this category.",
+			"scroll_top": "Scroll Top",
+			"play": "Play",
+			"desc": "Description"
 		}
 	}
 }
