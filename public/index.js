@@ -71,7 +71,7 @@
 			div.append(cards);
 
 			if(counter === 0) {
-				div.append('<div class="ui disabled header no_found">' + Lang.pages.index.no_coralines_found + '</div>');
+				return;
 			}
 
 			div.append(`<button class="ui basic button scrolltop">
