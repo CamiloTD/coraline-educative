@@ -24,7 +24,7 @@ The software must implement support the following categories:
 	- [ ] Physics
 - [ ] Formal Sciences
 	- [ ] Computer Science
-	- [ ] Maths
+	- [ ] Math
 	- [ ] Statistics
 - [ ] Applied sciences
 	- [ ] Engineering & Technology

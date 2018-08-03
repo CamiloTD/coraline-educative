@@ -1,0 +1,38 @@
+{
+	"name": "Coraline-Educative",
+	"navbar": {
+		"home": "Home",
+		"coralines": "Coralines",
+		"cloud": "Coraline Cloud"
+	},
+
+	"categories": {
+		"arts"	 	  : "Arts",
+		"history"	  : "History",
+		"lang"	 	  : "Language & Literature",
+		"philosophy"  : "Philosophy",
+		"theology"	  : "Theology",
+		"anthropology": "Anthropology",
+		"economics"   : "Economics",
+		"law"		  : "Law",
+		"political"   : "Political Sciences",
+		"psychology"  : "Psychology",
+		"sociology"   : "Sociology",
+		"biology"	  : "Biology",
+		"chemistry"   : "Chemistry",
+		"earth"		  : "Earth Sciences",
+		"space"		  : "Space Sciences",
+		"physics"	  : "Physics",
+		"computer"	  : "Computer",
+		"math"		  : "Math",
+		"statistics"  : "Statistics",
+		"engineering" : "Engineering & Technology",
+		"medicine": "Medicine & Health"
+	},
+
+	"pages": {
+		"index": {
+			"header": "What do you want to learn?"
+		}
+	}
+}

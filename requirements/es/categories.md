@@ -1,31 +1,31 @@
-## Categories
+## Categorías
 
-The software must implement support the following categories:
+Éste software debe implementar soportes para las siguientes categorías educativas:
 
-- [ ] Humanities
-	- [ ] Arts
-	- [ ] History
-	- [ ] Languages & literature
-	- [ ] Philosophy
-	- [ ] Theology
-- [ ] Social Sciences
-	- [ ] Anthropology
-	- [ ] Economics
-	- [ ] Human Geography
-	- [ ] Law
-	- [ ] Political Science
-	- [ ] Psychology
-	- [ ] Sociology
-- [ ] Natural Sciences
-	- [ ] Biology
-	- [ ] Chemistry
-	- [ ] Earth Sciences
-	- [ ] Space Sciences
-	- [ ] Physics
-- [ ] Formal Sciences
-	- [ ] Computer Science
-	- [ ] Maths
-	- [ ] Statistics
-- [ ] Applied sciences
-	- [ ] Engineering & Technology
-	- [ ] Medicine & Health
+- [ ] Humanidades
+	- [ ] Artes
+	- [ ] Historia
+	- [ ] Idiomas y literatura
+	- [ ] Filosofía
+	- [ ] Teología
+- [ ] Ciencias Sociales
+	- [ ] Antropología
+	- [ ] Economía
+	- [ ] Geografía Humana
+	- [ ] Leyes
+	- [ ] Ciencias Políticas
+	- [ ] Psicología
+	- [ ] Sociología
+- [ ] Ciencias Naturales
+	- [ ] Biología
+	- [ ] Química
+	- [ ] Geografía
+	- [ ] Astronomía
+	- [ ] Física
+- [ ] Ciencias Formales
+	- [ ] Ciencias de la Computación
+	- [ ] Matemáticas
+	- [ ] Estadísticas
+- [ ] Ciencias Aplicadas
+	- [ ] Ingeniería y Tecnología
+	- [ ] Medicina y Salud

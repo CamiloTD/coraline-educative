@@ -1,36 +1,7 @@
 const gulp = require('gulp');
-const pug = require('gulp-pug-i18n');
-const watch = require('gulp-watch');
-const stylus = require('gulp-stylus');
+const download = require('gulp-download');
 
-const DEBUG = true;
+gulp.task('get-require.kmi', () => download('https://raw.githubusercontent.com/camilotd/require.kmi/master/src/require.kmi.js').pipe(gulp.dest('public/kmi_modules')));
+gulp.task('get-coraline-client', () => download('https://raw.githubusercontent.com/camilotd/coraline-client/master/src/coraline-client.js').pipe(gulp.dest('public/kmi_modules')));
 
-gulp.task('build-stylus', () => {
-    let styl_obj = stylus({
-        include: 'src'
-    })
-
-    return gulp.src('src/**/*.styl').pipe(styl_obj).pipe(gulp.dest('public'));
-});
-
-gulp.task('build-pug', () => {
-    let pug_obj = pug({
-        i18n: {
-            locales: 'src/lang/*.*',
-            dest: 'public',
-            namespace: 'Lang',
-            filename: '{{lang}}/{{basename}}.html'
-        },
-        basedir: 'src',
-        doctype: 'html',
-        pretty: DEBUG,
-        cache: false
-    })
-
-    return gulp.src(['src/**/*.pug', '!/includes/**/*.*']).pipe(pug_obj).pipe(gulp.dest('public'));
-});
-
-gulp.task('build-rest', () => gulp.src(['!src/**/*.pug', '!src/**/*.styl']).pipe(gulp.dest('public')));
-
-gulp.task('build', ['build-pug', 'build-stylus', 'build-rest']);
-gulp.task('watch', () => watch('src/**/*.*', { ignoreInitial: false }, () => gulp.start('build')));
+gulp.task('init', ['get-require.kmi', 'get-coraline-client']);

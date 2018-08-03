@@ -1,0 +1,10 @@
+require('./container.min.css');
+require('./grid.min.css');
+require('./header.min.css');
+require('./icon.min.css');
+require('./image.min.css');
+require('./input.min.css');
+require('./label.min.css');
+require('./menu.min.css');
+require('./segment.min.css');
+require('./divider.min.css');
