@@ -96,6 +96,14 @@
 			let play = $('<button class="ui basic blue button">').html(Lang.pages.index.play);
 			let desc = $('<button class="ui basic green button">').html(Lang.pages.index.desc);
 
+			play.click(() => {
+				window.location.href = '/packages/' + name + '.kmi';
+			});
+
+			desc.click(() => {
+				window.location.href = '/packages/' + name + '/README.md';
+			});
+
 			buttons.append(play, desc);
 			extra.append(buttons);
 			card.append(content, extra);

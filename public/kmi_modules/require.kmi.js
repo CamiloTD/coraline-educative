@@ -1,4 +1,4 @@
-require = (function(){
+$require = (function(){
 	/** 
 	 * Main require function
 	 *

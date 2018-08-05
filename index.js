@@ -20,11 +20,12 @@
 // Require.kmi config
 	app.use(function (rq, rs, next) {
 		let { url } = rq;
-		if(url.substring(url.length -4) === '.kmi') {
+		if(url.substring(url.length - 4) === '.kmi') {
 			rs.end(`
 				<!DOCTYPE html>
 				<html>
 				<head>
+					<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 				</head>
 				<body>
 					<script src="/kmi_modules/require.kmi.js"></script>
@@ -34,21 +35,6 @@
 				</html>
 			`);
 		} else next();
-	});
-
-	app.get('/', (rq, rs) => {
-		rs.end(`
-				<!DOCTYPE html>
-				<html>
-				<head>
-				</head>
-				<body>
-					<script src="/kmi_modules/require.kmi.js"></script>
-
-					<meta kmi-init="index">
-				</body>
-				</html>
-		`);
 	});
 // Config
 	app.use(express.static(PUBLIC_DIR));
