@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="icon" type="image/png" href="img/logo/16.png"/>
+</head>
+<body>
+	<div class="ui raised very padded center aligned container segment" id="app">
+		<h2 class="ui header">
+			<img class="ui circular mini avatar image" src="/img/icons/misc/slack.png">
+			<div class="content">{{Lang.pages.index.header}}</div>
+			<img class="ui circular mini avatar image" src="/img/icons/misc/slack.png">
+		</h2>
+
+		<div class="ui horizontal divider"><img src="/img/logo/32.png"></div>
+
+
+		<div class="ui center aligned grid">
+			<div class="column four wide" v-for="category in Categories">
+				<a class="ui basic fluid image label category_label">
+					<img v-bind:src="'/img/icons/categories/' + category + '.png'">
+					<span class="fluid">{{Lang.categories[category]}}</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="category_container" v-for="(packages, category) in coralines">
+			<div class="ui horizontal divider" v-bind:name="category">
+				<img v-bind:src="'/img/icons/categories/' + category + '.png'">
+				<span>{{Lang.categories[category]}}</span>
+				<img v-bind:src="'/img/icons/categories/' + category + '.png'">
+			</div>
+
+			<div class="ui cards" v-for="(package, id) in packages">
+				<div class="card">
+					<div class="content">
+						<img class="right floated mini ui image" v-bind:src="'/packages/' + id + '/avatar.png'">
+						<div class="header">{{package.lang.name}}</div>
+						<div class="description">{{package.lang.description}}</div>
+					</div>
+
+					<hr>
+
+					<div class="extra-content">
+						<div class="ui two fluid buttons">
+							<button class="ui basic blue button">{{Lang.pages.index.play}}</button>
+							<button class="ui basic green button">{{Lang.pages.index.desc}}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="ui basic button scrolltop">
+				<img src="/img/icons/misc/scrolltop.png">
+			</button>
+		</div>
+	</div>
+
+	<meta kmi-init="/index">
+	<script type="text/javascript" src="kmi_modules/require.kmi.js"></script>
+</body>
+</html>
