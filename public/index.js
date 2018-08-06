@@ -3,13 +3,14 @@ let Lang = require('/lang');
 let Vue = require('vue');
 let io = require('/socket.io/socket.io.js');
 let Utils = require('./utils');
+let Cookies = require('js-cookie');
 
 function desc (id) {
 	window.location = '/markdown.kmi?target=/packages/' + id + '/README';
 }
 
 function play (id) {
-
+	window.location = '/play.kmi?target=' + id;
 }
 
 let app = new Vue({
@@ -23,6 +24,7 @@ let app = new Vue({
 
 	methods: {
 		scrollTo: Utils.scrollToAnchor,
+		scrollTop: () => Utils.scrollTo(0),
 		desc: desc,
 		play: play
 	}
