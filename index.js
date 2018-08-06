@@ -20,6 +20,8 @@
 // Require.kmi config
 	app.use(function (rq, rs, next) {
 		let { url } = rq;
+		let x = url.indexOf("?");
+		url = url.substring(0, x === -1? url.length : x);
 		if(url.substring(url.length - 4) === '.kmi') {
 			rs.end(`
 				<!DOCTYPE html>

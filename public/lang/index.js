@@ -25,3 +25,4 @@ let Lang = loadLang('.', browser_lang);
 
 exports = module.exports = () => Lang;
 exports.load = loadLang;
+exports.lang = browser_lang;
