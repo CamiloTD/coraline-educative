@@ -17,44 +17,13 @@
 
 		<div class="ui center aligned grid">
 			<div class="column four wide" v-for="category in Categories">
-				<a class="ui basic fluid image label category_label" @click="scrollTo(category)">
+				<a class="ui basic fluid image label category_label" :href="'category.html?category=' + category">
 					<img :src="'/img/icons/categories/' + category + '.png'">
 					<span class="fluid">{{Lang.categories[category]}}</span>
 				</a>
 			</div>
 		</div>
-
-		<!--div class="category_container" v-for="(packages, category) in coralines">
-			<div class="ui horizontal divider" :name="category">
-				<img :src="'/img/icons/categories/' + category + '.png'">
-				<span>{{Lang.categories[category]}}</span>
-				<img :src="'/img/icons/categories/' + category + '.png'">
-			</div>
-
-			<div class="ui cards" v-for="(package, id) in packages">
-				<div class="card">
-					<div class="content">
-						<img class="right floated mini ui image" :src="'/packages/' + id + '/avatar.png'">
-						<div class="header">{{package.lang.name}}</div>
-						<div class="description">{{package.lang.description}}</div>
-					</div>
-
-					<hr>
-
-					<div class="extra-content">
-						<div class="ui two fluid buttons">
-							<button class="ui basic blue button" @click="play(id)">{{Lang.pages.index.play}}</button>
-							<button class="ui basic green button" @click="desc(id)">{{Lang.pages.index.desc}}</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<button class="ui basic button scrolltop" @click="scrollTop()">
-				<img src="/img/icons/misc/scrolltop.png">
-			</button>
-		</div>
-	</div-->
+	</div>
 
 	<meta kmi-init="/index">
 	<script type="text/javascript" src="kmi_modules/require.kmi.js"></script>

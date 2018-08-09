@@ -1,0 +1,11 @@
+@font-face { font-family: 'Open Sans'; src: url('/fonts/OpenSans-Regular.ttf'); }
+
+* {
+  font-family: 'Open Sans' !important;
+}
+
+body {
+  margin: 0;
+  padding-top: 5%;
+  background: url('/img/textures/ep_naturalblack.png');
+}

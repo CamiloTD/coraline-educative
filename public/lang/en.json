@@ -1,11 +1,5 @@
 {
 	"name": "Coraline-Educative",
-	"navbar": {
-		"home": "Home",
-		"coralines": "Coralines",
-		"cloud": "Coraline Cloud"
-	},
-
 	"categories": {
 		"arts"	 	  : "Arts",
 		"history"	  : "History",
@@ -38,5 +32,9 @@
 			"play": "Play",
 			"desc": "Description"
 		}
+	},
+
+	"category": {
+		"no_found": "No Coralines found for this category."
 	}
 }

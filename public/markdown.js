@@ -24,5 +24,6 @@ if(Lang.lang === "en") {
 $(document.body).append(container);
 
 require('/css/markdown.css');
+require('./css/base.css');
 require('github-markdown.css');
 require('semantic-ui')
