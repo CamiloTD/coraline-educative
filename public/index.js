@@ -29,7 +29,5 @@ let app = new Vue({
 	}
 });
 
-
 require('./css/index.css');
-require('./css/base.css');
 require('semantic-ui');

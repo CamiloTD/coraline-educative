@@ -3,14 +3,15 @@
 <head>
 	<title></title>
 	<link rel="icon" type="image/png" href="img/logo/16.png"/>
+	<link rel="stylesheet" href="/css/base.css"/>
 </head>
 <body>
-	<div class="ui raised very padded center aligned container segment" id="app">
+	<div class="ui raised very padded center aligned container segment" id="app" hidden>
 		<div v-if="is_empty">
 			<h1>{{ Lang.pages.category.no_found }}</h1>
 		</div>
 		<div v-else>
-			<h2>{{Lang.pages.category.category_prefix}} {{ Lang.categories[category] }}</h2>
+			<h2>{{ Lang.categories[category] }}</h2>
 			<div class="ui divider"></div>
 		</div>
 
@@ -32,6 +33,11 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="ui divider"></div>
+		<a class="ui fluid blue label" href="/">
+			{{Lang.common.go_back}}
+		</a>
 	</div>
 
 	<meta kmi-init="/category">

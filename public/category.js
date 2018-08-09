@@ -4,7 +4,15 @@ let info = io('/info');
 let Lang = require('/lang');
 
 let category = window.location.href.substring(window.location.href.indexOf("category=") + 9);
-let app;
+let app = new Vue({
+	el: '#app',
+	data: {
+		is_empty: false,
+		Lang: Lang(),
+		category: category,
+		packages: {}
+	}
+});;
 
 info.on('packages', (data) => {
 	let packages = {};
@@ -20,13 +28,11 @@ info.on('packages', (data) => {
 		}
 	}
 
-	app = new Vue({
-		el: '#app',
-		data: { category, packages, is_empty, Lang: Lang() }
-	});
+	app.packages = packages;
+	app.is_empty = is_empty;
 });
 
 info.emit('packages');
+
 require('semantic-ui');
 require('./css/category.css');
-require('./css/base.css');

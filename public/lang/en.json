@@ -31,10 +31,14 @@
 			"scroll_top": "Scroll Top",
 			"play": "Play",
 			"desc": "Description"
+		},
+
+		"category": {
+			"no_found": "No Coralines found for this category."
 		}
 	},
 
-	"category": {
-		"no_found": "No Coralines found for this category."
+	"common": {
+		"go_back": "Go back to home!"
 	}
 }

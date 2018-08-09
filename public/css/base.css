@@ -9,3 +9,5 @@ body {
   padding-top: 5%;
   background: url('/img/textures/ep_naturalblack.png');
 }
+
+[v-cloak] { display: none; }
