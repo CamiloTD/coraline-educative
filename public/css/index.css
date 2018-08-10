@@ -1,13 +1,3 @@
-@font-face { font-family: 'Open Sans'; src: url('/fonts/OpenSans-Regular.ttf'); }
-
-body {
-  margin: 0;
-  padding: 0;
-  background: url('/img/textures/ep_naturalblack.png');
-}
-* {
-  font-family: 'Open Sans' !important;
-}
 .slider {
   overflow: hidden;
 }
@@ -21,6 +11,7 @@ body {
   padding-bottom: 15px !important;
   text-align: left;
   padding-left: 30px !important;
+  text-decoration: none;
 }
 
 .bars.icon {

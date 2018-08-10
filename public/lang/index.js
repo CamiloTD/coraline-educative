@@ -1,11 +1,17 @@
-let Lang = require('./en.json');
 let browser_lang = (navigator.language || navigator.userLanguage).substring(0, 2);
 
-try {
-	let lang = require('./' + browser_lang + '.json');
-	merge(Lang, lang);
+function loadLang (base_folder, primary_lang = browser_lang) {
+	let Lang = {};
 
-} catch (exc) {
+	try {
+		Lang = require(base_folder + '/en.json');
+		let lang = require(base_folder + '/' + primary_lang + '.json');
+		merge(Lang, lang);
+
+	} catch (exc) {
+	}
+
+	return Lang;
 }
 
 function merge(tar, src) {
@@ -15,4 +21,8 @@ function merge(tar, src) {
 	}
 }
 
-module.exports = Lang;
+let Lang = loadLang('.', browser_lang);
+
+exports = module.exports = () => Lang;
+exports.load = loadLang;
+exports.lang = browser_lang;

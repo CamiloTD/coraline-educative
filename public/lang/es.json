@@ -1,10 +1,5 @@
 {
 	"name": "Coraline-Educativo",
-	"navbar": {
-		"home": "Inicio",
-		"coralines": "Coralines"
-	},
-
 	"categories": {
 		"arts"	 	  : "Artes",
 		"history"	  : "Historia",
@@ -36,6 +31,14 @@
 			"scroll_top": "Volver Arriba",
 			"play": "Iniciar",
 			"desc": "Descripción"
+		},
+
+		"category": {
+			"no_found": "No se han encontrado Coralines en ésta categoría."
 		}
+	},
+
+	"common": {
+		"go_back": "¡Ir vuelta al Inicio!"
 	}
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="icon" type="image/png" href="img/logo/16.png"/>
+	<link rel="stylesheet" href="/css/base.css"/>
+</head>
+<body>
+	<div class="ui raised very padded center aligned container segment" id="app" hidden>
+		<div v-if="is_empty">
+			<h1>{{ Lang.pages.category.no_found }}</h1>
+		</div>
+		<div v-else>
+			<h2>{{ Lang.categories[category] }}</h2>
+			<div class="ui divider"></div>
+		</div>
+
+		<div class="ui cards" v-for="(package, id) in packages">
+			<div class="card">
+				<div class="content">
+					<img class="right floated mini ui image" :src="'/packages/' + id + '/avatar.png'">
+					<div class="header">{{package.lang.name}}</div>
+					<div class="description">{{package.lang.description}}</div>
+				</div>
+
+				<hr>
+
+				<div class="extra-content">
+					<div class="ui two fluid buttons">
+						<button class="ui basic blue button" @click="play(id)">{{Lang.pages.index.play}}</button>
+						<button class="ui basic green button" @click="desc(id)">{{Lang.pages.index.desc}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui divider"></div>
+		<a class="ui fluid blue label" href="/">
+			{{Lang.common.go_back}}
+		</a>
+	</div>
+
+	<meta kmi-init="/category">
+	<script type="text/javascript" src="kmi_modules/require.kmi.js"></script>
+</body>
+</html>
