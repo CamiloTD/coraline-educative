@@ -20,6 +20,7 @@
 				<a class="ui basic fluid image label category_label" :href="'category.html?category=' + category">
 					<img :src="'/img/icons/categories/' + category + '.png'">
 					<span class="fluid">{{Lang.categories[category]}}</span>
+    				<div class="floating ui teal mini label">{{package_count[category]}}</div>
 				</a>
 			</div>
 		</div>
