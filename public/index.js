@@ -2,15 +2,8 @@ let $ = require('jquery');
 let Lang = require('/lang');
 let Vue = require('vue');
 let Utils = require('./utils');
-let Cookies = require('js-cookie');
-
-function desc (id) {
-	window.location = '/markdown.kmi?target=/packages/' + id + '/README';
-}
-
-function play (id) {
-	window.location = '/play.kmi?target=' + id;
-}
+			require('/css/base.css');
+			require('/components/intro')();
 
 let app = new Vue({
 	el: '#app',
@@ -23,11 +16,9 @@ let app = new Vue({
 
 	methods: {
 		scrollTo: Utils.scrollToAnchor,
-		scrollTop: () => Utils.scrollTo(0),
-		desc: desc,
-		play: play
+		scrollTop: () => Utils.scrollTo(0)
 	}
 });
 
-require('./css/index.css');
 require('semantic-ui');
+require('/css/index.css');

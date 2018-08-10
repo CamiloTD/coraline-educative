@@ -3,6 +3,9 @@ let io = require('/socket.io/socket.io.js');
 let info = io('/info');
 let Lang = require('/lang');
 
+function desc (id) { window.location = '/markdown.kmi?target=/packages/' + id + '/README';}
+function play (id) { window.location = '/play.kmi?target=' + id; }
+
 let category = window.location.href.substring(window.location.href.indexOf("category=") + 9);
 let app = new Vue({
 	el: '#app',
@@ -11,8 +14,10 @@ let app = new Vue({
 		Lang: Lang(),
 		category: category,
 		packages: {}
-	}
-});;
+	},
+	
+	methods: { play, desc }
+});
 
 info.on('packages', (data) => {
 	let packages = {};
