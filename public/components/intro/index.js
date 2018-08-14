@@ -19,7 +19,8 @@ module.exports = (force_play) => {
 		  width: w,
 		  height: h,
 		  overflow: 'hidden',
-		  background: "white"
+		  background: "white",
+		  "z-index": 9999
 		});
 
 		let text_wrapper = $('<span>').css({

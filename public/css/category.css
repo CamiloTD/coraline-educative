@@ -2,3 +2,7 @@ a {
   padding-bottom: 20px;
   text-decoration: none !important;
 }
+
+.ccontainer {
+	text-align: left;
+}
