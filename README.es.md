@@ -5,13 +5,15 @@ La tecnología ofrece nuevas formas de hacer las cosas, re-descubrimos lo que ha
 
 El modelo de clase actual es el mismo que hace décadas, el docente dicta su clase, los estudiantes atienden.  En alguna ocasión, se hacen actividades creativas y en otras se recurre a la experimentación.  Sin embargo, a pesar de que el aprendizaje está más relacionado con la experiencia que con la memorización, éste tipo de actividades son la excepción a la norma, teniendo solo su máxima frecuencia de aparición en materias experimentales como Física, Química, Biología, etc...
 
+---
+
 Ésta falta de actividades, ha generado estudiantes apáticos, que  *“Estudian a empujones”*, y cuando logran retener algo rápidamente lo olvidan, debido a que no relacionan ese conocimiento con los asuntos de la vida cotidiana.  Es por ello, que con el **Proyecto Coraline-E** pretendemos cambiar la experiencia de los estudiantes en las aulas, ayudándonos de las infinitas posibilidades que nos proponen los sistemas de información y el internet de las cosas.
 
-Para ello, se pretende valer principalmente de la usabilidad de los **Dispositivos Móviles**, y en lo posible, aumentar la experiencia con **Realidad Aumentada**, **Realidad Virtual**, **Kinect**, entre otros… Haciendo que el estudiante interactúe directamente con el campo de estudio, en lugar de ser solo un observador estático ante un conocimiento pre-establecido.
+Para ello, pretendemos valernos principalmente de la usabilidad de los **Dispositivos Móviles**, y en lo posible, aumentar la experiencia con **Realidad Aumentada**, **Realidad Virtual**, **Kinect**, entre otros… Haciendo que el estudiante interactúe directamente con el campo de estudio, en lugar de ser solo un observador estático ante un conocimiento pre-establecido.
 
-La propuesta del **Proyecto Coraline** se basa en el desarrollo de paquetes de software intercomunicativo, portable, multiplataforma y que pueda ser usable sin necesidad de tener instalado más que un navegador compatible con **HTML5** en los dispositivos a comunicar. Cada paquete de software será ejecutado bajo el siguiente modelo:
+Nuestra propuesta se basa en el desarrollo de paquetes de software intercomunicativo, portable, multiplataforma y que pueda ser usable sin necesidad de tener instalado más que un navegador compatible con **HTML5** en los dispositivos a comunicar. Cada paquete de software será ejecutado bajo el siguiente modelo:
 
-1.  El docente ejecuta el paquete respectivo a su propia clase en la computadora dispuesta para la misma
+ 1.  El docente ejecuta el software respectivo a su propia clase en la computadora dispuesta para la misma
 
 2. Se utiliza un proyector, pantalla electrónica, o monitor para mostrar la pantalla principal del Software, la cual servirá como guía central para la clase
 
