@@ -1643,6 +1643,14 @@ request@latest:
     tunnel-agent "^0.6.0"
     uuid "^3.1.0"
 
+require.io@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/require.io/-/require.io-1.0.4.tgz#91c4f3f41e06af527039fbebe25fe621c7e3fe37"
+  integrity sha512-+vYbU4QgJ7IUGkr3wARmeg8Bvk+lcUN2lhIssFVfpgbnMpt86dS/kKaSpH9OAXhILX1em0UVNeTDLY346UWRjg==
+  dependencies:
+    express "^4.16.3"
+    opn "^5.3.0"
+
 resolve-dir@^1.0.0, resolve-dir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/resolve-dir/-/resolve-dir-1.0.1.tgz#79a40644c362be82f26effe739c9bb5382046f43"

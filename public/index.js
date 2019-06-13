@@ -24,7 +24,6 @@ let app = new Vue({
 	}
 });
 
-
 info.on('packages', (data) => {
 	let package_count = {};
 	

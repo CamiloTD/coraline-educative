@@ -45,7 +45,7 @@
 		console.log("Coraline-Educative is running at port :" + PORT);
 	});
 
-	let coraline_server = Coraline.createServer(io, { password: 'H1dd3n' });
+	let coraline_server = Coraline.createServer(io, { password: "" });
 // Info Server Config
 	let info_io = io.of('/info');
 	let coralines = {};
